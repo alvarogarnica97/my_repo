@@ -1,3 +1,5 @@
+# Despliegue en local
+En esta sección se va a indicar como desplegar el código en local. El código se puede encontrar en el siguiente enlace: https://github.com/ging/practica_big_data_2019
 ## Versiones utilizadas
 Las versiones utilizadas para la ejecución en local son:
 Kafka 2.12-2.3.0
@@ -95,7 +97,7 @@ sbt package
 
 Como resultado, se genera una carpeta /target, y si buceamos por ella hasta /target/scala-2.11, vemos que se ha generado un fichero .jar, el cual se va a emplear en el siguiente comando de Spark-submit para ejecutar el predictor de vuelos. Este comando se ejecuta desde la carpeta de Spark descargada:
 ```
-bin/spark-submit --class es.upm.dit.ging.predictor.MakePrediction --master local --packages org.mongodb.spark:mongo-spark-connector_2.11:2.3.2,org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.0 /Users/Gar/Desktop/BDFI/practica_big_data_2020/flight_prediction/target/scala-2.11/flight_prediction_2.11-0.1.jar
+bin/spark-submit --class es.upm.dit.ging.predictor.MakePrediction --master local --packages org.mongodb.spark:mongo-spark-connector_2.11:2.3.2,org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.0 /path_to_practica/flight_prediction/target/scala-2.11/flight_prediction_2.11-0.1.jar
 ```
 
 ## Servidor Web
